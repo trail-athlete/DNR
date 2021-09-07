@@ -1,0 +1,86 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+    margin: 0;
+    background-image: asset-url('bodyBG.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header {
+    background: #285ADD;
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 0px;
+    position: sticky;
+}
+.form-container {
+    width: 500px;
+}
+.navbar_logo {
+    width: 50px;
+    float: left;
+    padding: 10px 0;
+}
+.body_bg {
+    width: 100%;
+}
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+nav {
+    /*float: right;*/
+    text-align: center;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+    font-family: sans-serif;
+
+    position: relative;
+}
+nav a {
+    color:azure;
+    text-decoration: none;
+    font-size: 14px;
+}
+nav a:hover {
+    color:darkgray;
+}
+nav a::before {
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: white;
+
+    position: absolute;
+    top: 150%;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+nav a:hover::before {
+    width: 100%;
+}
